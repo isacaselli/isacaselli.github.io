@@ -4,6 +4,7 @@ title: 'Tutorial 1: Setting up a test environment for Linux Kernel'
 date: 2025-02-26 14:00:00 -0300
 categories: [Linux Kernel, Test environment]
 comments: false
+pin: true
 description: As part of the Free and Open Source Software Development course at USP, this post summarizes the steps to set up a QEMU and Libvirt test environment for Linux Kernel contributions.
 ---
 As a first step, since I had recently bought a new laptop that came with Windows pre-installed, I had to set up a dual boot system and install Ubuntu Linux alongside it. I did this with help from classmates and professors. However, this step ended up taking longer than expected because of a small mistake — we accidentally allocated too little space for the Windows partition, which caused the installer to freeze and fail. Once we realized the issue, we wiped everything and started over from scratch. The second time, it worked just fine.
