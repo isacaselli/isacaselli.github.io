@@ -57,7 +57,12 @@ int inv_mpu_aux_write(const struct inv_mpu6050_state *st, uint8_t addr,
 With the function that we created, we got the following:
 
 ```c
-
+ /**
+  * inv_mpu_aux_exec_xfer() - executes i2c auxiliary transfer and checks status
+  * @st: driver internal state.
+  *
+  *  Returns 0 on success, a negative error code otherwise.
+  */
 int inv_mpu_aux_exec_xfer(const struct inv_mpu6050_state *st)
  {
 	 int ret;
