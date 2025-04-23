@@ -57,6 +57,34 @@ int inv_mpu_aux_write(const struct inv_mpu6050_state *st, uint8_t addr,
 With the function that we created, we got the following:
 
 ```c
+
+int inv_mpu_aux_exec_xfer(const struct inv_mpu6050_state *st)
+ {
+	 int ret;
+	 unsigned int status;
+	 
+	 /* do i2c xfer */
+	 ret = inv_mpu_i2c_master_xfer(st);
+	 if (ret)
+		 goto error_disable_i2c;
+ 
+	 /* disable i2c slave */
+	 ret = regmap_write(st->map, INV_MPU6050_REG_I2C_SLV_CTRL(0), 0);
+	 if (ret)
+		 goto error_disable_i2c;
+ 
+	 /* check i2c status */
+	 ret = regmap_read(st->map, INV_MPU6050_REG_I2C_MST_STATUS, &status);
+	 if (ret)
+		 return ret;
+	 if (status & INV_MPU6050_BIT_I2C_SLV0_NACK)
+		 return -EIO;
+ 
+ error_disable_i2c:
+	 regmap_write(st->map, INV_MPU6050_REG_I2C_SLV_CTRL(0), 0);
+	 return ret;
+ }
+ 
 int inv_mpu_aux_read(const struct inv_mpu6050_state *st, uint8_t addr,
                      uint8_t reg, uint8_t *val, size_t size)
 {
