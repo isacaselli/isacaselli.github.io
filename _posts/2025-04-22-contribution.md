@@ -81,3 +81,10 @@ int inv_mpu_aux_write(const struct inv_mpu6050_state *st, uint8_t addr,
     return 0;
 }
 ```
+## Submitting the Patch
+
+Besides working on the code itself, I also experienced how to **submit a patch to the Linux kernel via email**. This is a crucial part of the contribution process, and even though our patch was small, learning this workflow was important.
+
+During this process, I ran into an issue with my **university email address**, which caused some trouble sending emails in the proper format. Thankfully, with help from one of the TAs, I was able to use my **personal email** to send the patch instead.
+
+We also received **feedback from the course TA** after sending the patch for initial review. Some **improvements were suggested** before we submit it officially to the kernel mailing list, and working on these adjustments will be the **next step** in this process.
