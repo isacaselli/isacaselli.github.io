@@ -21,6 +21,13 @@ To fix that, we submitted a v3 with the correct changes.
 Here is the resulting version of the function in v3:
 
 ```c
+
+ /*
+  * i2c master auxiliary bus transfer function.
+  * Requires the i2c operations to be correctly setup before.
+  * Disables SLV0 and checks for NACK status internally.
+  * Assumes that only SLV0 is used for transfers.
+  */
 static int inv_mpu_i2c_master_xfer(const struct inv_mpu6050_state *st)
 {
         /* use 50hz frequency for xfer */
