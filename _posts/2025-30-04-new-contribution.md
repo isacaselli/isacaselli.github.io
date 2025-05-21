@@ -15,13 +15,14 @@ When analyzing the options, my partner and I were torn between Git and GNOME. Ho
 
 So, we began the onboarding process for GNOME. We explored the various systems in the project and became interested in GNOME Files, since we found some promising issues already labeled for newcomers. After researching recent issues, this one caught our attention: https://gitlab.gnome.org/GNOME/nautilus/-/issues/3856#note_2433896.
 
-Once we had made our choice, we spoke with our colleagues Otavio and Felipe, who had already contributed to GNOME Calendar. They recommended that we comment on the issues we were interested in, to start engaging with the maintainers and share our ideas for a solution before diving into the code.
+Once we had made our choice, we spoke with our colleagues Otavio and Felipe, who had already contributed to GNOME Calendar. They recommended that we comment on the issues we were interested in, to start engaging with the maintainers and share our ideas for a solution before diving into the code. 
 
-That’s when something unexpected happened: after our interaction, the maintainers removed the "newcomer" label from the issue. Still, since we had already started thinking about possible solutions, we decided to continue investigating and try to solve the issue anyway. As a Linux user, it was easy to clone the project on my personal computer and start contributing, especially since the problem reported on Fedora also occurred on Ubuntu (my distro).
+We searched the suggestion made in the issue by a mantainer, and found out that there was already a function which should solve the problem, so we decided to comment that on the issue. That’s when something unexpected happened: after our interaction, the maintainers removed the "newcomer" label from the issue. Still, since we had already started thinking about possible solutions, we decided to continue investigating and try to solve the issue anyway. 
 
-Here's a screenshot of the two kernel contributions we are considering:
+As a Linux user, it was easy to clone the project on my personal computer and start contributing, especially since the problem reported on Fedora also occurred on Ubuntu (my distro).
+
+Here's a screenshot of the interaction with mantainers.
 
 ![Visual Studio Code showing kernel patch options](/assets/img/gnome_gitlab.png)
 
-
-From there, we began digging into the code, trying to identify the issue and explore potential fixes.
+From there, we began digging more into the code, trying to identify the issue and explore potential fixes.
